@@ -424,8 +424,8 @@ end
 
 -- quat --
 
---- from euler angles, up left front
----@return Quaternion_mt
+--- from euler angles, z, y, x
+---@return Quaternion
 function quat.from_euler_angles(y, p, r)
 	local cy = cos(y * 0.5)
 	local sy = sin(y * 0.5)

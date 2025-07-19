@@ -5,6 +5,8 @@ local modules = (...) and (...):gsub('%.init$', '') .. ".modules." or ""
 ---@field vec3 Vector3
 ---@field utils ML_Utils
 ---@field bvh BVH 
+---@field mat4 Matrix4
+---@field bound3 Bound3
 local ml = {
 }
 

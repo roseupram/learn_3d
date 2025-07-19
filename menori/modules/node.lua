@@ -16,6 +16,7 @@ You need to inherit from the Node class to create your own display object.
 local modules = (...):match('(.*%menori.modules.)')
 
 local class  = require (modules .. 'libs.class')
+---@type MathLib
 local ml     = require (modules .. 'ml')
 local mat4   = ml.mat4
 local vec3   = ml.vec3
@@ -26,6 +27,8 @@ local _find
 local _transform_force
 
 ---@class Node
+---@field children Node[]
+---@overload fun(...): Node
 local Node = class('Node')
 Node.layer = 0
 
@@ -86,7 +89,7 @@ function Node:set_position(x, y, z)
 end
 
 --- Set Node local rotation.
--- @tparam ml.quat q Rotation quaternion.
+---@param q Quaternion
 function Node:set_rotation(q)
       self._transform_flag = true
       self.rotation = q

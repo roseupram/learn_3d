@@ -20,6 +20,7 @@ local modules = (...) and (...):gsub('%.init$', '') .. ".modules." or ""
 ---@field Scene Scene
 ---@field Environment Environment
 ---@field PerspectiveCamera PerspectiveCamera
+---@field Node Node
 local menori = {
       PerspectiveCamera      = require(modules .. 'core3d.camera'),
       Environment            = require(modules .. 'core3d.environment'),

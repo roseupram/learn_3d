@@ -17,6 +17,7 @@ local modules = (...):gsub('%.[^%.]+$', '') .. "."
 local vec3 = require (modules .. "vec3")
 
 local bound3 = {}
+---@class Bound3
 local bound3_mt = {}
 bound3_mt.__index = bound3_mt
 

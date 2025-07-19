@@ -32,6 +32,7 @@ end
 
 local mat4 = {}
 ---@class Matrix4
+---@overload fun(...): Matrix4
 local mat4_mt = {}
 mat4_mt.__index = mat4_mt
 

@@ -13,6 +13,7 @@ Module for building scene nodes from a loaded gltf format.
 
 local modules = (...):match('(.*%menori.modules.)')
 
+---@type Node
 local Node = require (modules .. '.node')
 local ModelNode = require (modules .. 'core3d.model_node')
 local Mesh = require (modules .. 'core3d.mesh')
@@ -95,7 +96,7 @@ end
 
 --- Creates a node tree.
 -- @tparam table gltf Data obtained with glTFLoader.load
--- @tparam[opt] function callback Callback Called for each built scene with params (scene, builder).
+---@param callback fun(scene:Scene, builder:table)|any callback Callback Called for each built scene with params (scene, builder).
 ---@return Node[] 
 function NodeTreeBuilder.create(gltf, callback)
       local builder = {

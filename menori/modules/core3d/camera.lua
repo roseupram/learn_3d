@@ -59,7 +59,7 @@ end
 -- @tparam number x screen position x
 -- @tparam number y screen position y
 -- @tparam table viewport (optional) viewport rectangle (x, y, w, h)
--- @treturn table that containing {position = vec3, direction = vec3}
+---@return {position : Vector3, direction : Vector3}
 function PerspectiveCamera:screen_point_to_ray(x, y, viewport)
 	viewport = viewport or {app:get_viewport()}
 
